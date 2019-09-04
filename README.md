@@ -1,7 +1,4 @@
-# Angular4DynamicForms
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
-
+# Dynamic-UI-Master
 ## Highlights of Version 1.0
 
 1. The following input types are supported:
@@ -25,6 +22,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 4. Designer is also accessible as a textarea, the input of which is updated via a POST service into �localdata.json�.
 5. The url for designer is �/designer�
 
+## Installation Instructions
+
+1) Clone or download repository. 
+2) Download and install Node.JS. It can be downloaded from the following URL - https://nodejs.org/en/download/. Open Node.JS CLI and execute the following command to install Angular CLI globally - npm install -g @angular/cli
+3) Change the directory in the Node.JS to the directory where the repository has been installed.
+4) Execute the following command - 'npm install' to build the project
+5) Once installed execute the command - 'ng serve --open'. This command launches the designer component of the project.
+6) Open another Node.JS CLI instance. Change the directory to the directory where the repository is located. Execute the command 'npm run dev'. This command launches the renderer component of the project. Navigate to `http://localhost:4201/`.
+7) Finally open a normal Windows Command prompt. Change the directory to the directory where the repository is located. Execute the command 'node server.js'. This is used to start the local server. 
+
 ## Development server
 
 Run `npm run dev` for a dev server. Navigate to `http://localhost:4201/`. The app will automatically reload if you change any of the source files.
@@ -46,22 +53,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
-## To Do Items 
-
-1.  Custom Composite Controls 
-2.	Angular based routing – for accessing internal routes.
-3.  CSS fixes
-4.	Designer - Adding props to each control + Creation of JSON (similar to parsing written in the FormField service)
-5.	I18n support
-6.	Popups  - for login, messages & confirmation
-7.	Creating a form instance from a created template
-
-8.	Authentication
-9.	Listing form instances with RBAC support
-10.	Color schemes - complaince with BMC Adapt
-11.	Nested Sections
