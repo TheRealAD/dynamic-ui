@@ -23,10 +23,6 @@
                 {
                     "key": "dc_toggle",
                     "type": "field"
-                },
-                {
-                    "key": "dc_googlesearch_2",
-                    "type": "field"
                 }
             ],
             "label": "fbt_create_data_collector1",
