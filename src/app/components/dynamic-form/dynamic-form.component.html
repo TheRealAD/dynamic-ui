@@ -1,0 +1,50 @@
+
+<input id="AAA" type="text">
+
+
+<button 
+                type="submit"
+                (click)="onFormRequested()"
+                class="btn btn-info">
+                REQUEST
+            </button>
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3 class="text-left"> Form </h3>
+        <form (ngSubmit)="onSubmit()" [formGroup]="dfFormGroup">
+
+            <div
+                [ngSwitch]="sectionDisplayType">
+
+                <div
+                    *ngSwitchCase="'TABBED'">
+                    <app-section-tabbed
+                        [dynamicForm]="dynamicForm"
+                        [dynamicFormSection]="dynamicFormSection" 
+                        [dfFormGroup]="dfFormGroup">
+                    </app-section-tabbed>
+                </div>
+
+                <div
+                    *ngSwitchCase="'LIST'">
+                    <app-section-list
+                        [dynamicForm]="dynamicForm"
+                        [dynamicFormSection]="dynamicFormSection" 
+                        [dfFormGroup]="dfFormGroup">
+                    </app-section-list>
+                </div>
+                
+            </div>
+
+            <hr>
+
+            <button 
+                type="submit"
+                class="btn btn-info">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>

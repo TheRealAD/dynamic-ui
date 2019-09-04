@@ -1,0 +1,86 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div 
+            class="form-group"
+            [ngSwitch]="dynamicFormField.type"
+            [formGroup]="dfFormGroup">
+
+            <label [for]="dynamicFormField.key">{{ dynamicFormField.label }}</label>
+
+            <app-text 
+                *ngSwitchCase="'TEXT'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-text>
+
+            <app-dropdown 
+                *ngSwitchCase="'DROPDOWN'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-dropdown>
+
+            <app-date 
+                *ngSwitchCase="'DATE'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-date>
+
+            <app-range 
+                *ngSwitchCase="'RANGE'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-range>
+
+            <app-textarea 
+                *ngSwitchCase="'TEXTAREA'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-textarea>
+
+            <app-button 
+                *ngSwitchCase="'BUTTON'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-button>
+
+            <app-toggle 
+                *ngSwitchCase="'TOGGLE'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-toggle>
+
+            <app-dependentlist 
+                *ngSwitchCase="'DEPENDENTLIST'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-dependentlist>
+
+            <app-textappend 
+                *ngSwitchCase="'TEXTAPPEND'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-textappend>
+
+            <app-textother 
+                *ngSwitchCase="'TEXTOTHER'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-textother>
+
+
+            <app-chart
+                *ngSwitchCase="'CHART'"
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-chart>
+
+            <app-googlesearch 
+                *ngSwitchCase="'GOOGLESEARCH'" 
+                [dfForm]="dfFormGroup"
+                [dfFormField]="dynamicFormField">
+            </app-googlesearch>
+
+
+        </div>
+    </div>
+</div>

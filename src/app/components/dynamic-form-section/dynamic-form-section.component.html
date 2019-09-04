@@ -1,0 +1,8 @@
+<div class="panel panel-info">
+    <div class="panel-heading" (click)="toggleSectionDisplay()" style="cursor: pointer;">{{ dynamicFormSection.label }}</div>
+    <div class="panel-body" *ngIf="displaySection">
+        <div *ngFor="let dynamicFormField of dynamicFormSection.getFields()">
+            <df-form-field [dynamicFormField]="dynamicFormField" [dfFormGroup]="dfFormGroup"></df-form-field>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div [formGroup]="dfForm">
+    <select 
+        class="form-control" 
+        [id]="dfFormField.key"
+        [name]="dfFormField.key"
+        [formControlName]="dfFormField.key">
+            <option 
+                *ngFor="let option of dfFormField.selectorControl.options" 
+                [ngValue]="option.key">
+                    {{ option.value }}
+            </option>
+    </select>
+</div>

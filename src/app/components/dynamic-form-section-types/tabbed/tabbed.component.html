@@ -1,0 +1,13 @@
+<ul class="nav nav-pills">
+    <li 
+        *ngFor="let dynamicFormSection of dynamicForm.getSections(); let i = index"
+        role="presentation"
+        class="{{ i == selectedSectionIndex ? 'active' : '' }}"
+        (click)="selectSection(i)">
+        <a style="cursor: pointer;">{{ dynamicFormSection.label }}</a>
+    </li>
+</ul>
+<app-dynamic-form-section 
+    [dynamicFormSection]="dynamicForm.getSection(selectedSectionIndex)" 
+    [dfFormGroup]="dfFormGroup">
+</app-dynamic-form-section>

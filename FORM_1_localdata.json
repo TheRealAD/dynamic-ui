@@ -1,0 +1,171 @@
+{
+    "containers": [
+        {
+            "key": "dc_create_data_collector1",
+            "type": "SECTION",
+            "controllist": [
+                {
+                    "key": "dc_name",
+                    "type": "field"
+                },
+                {
+                    "key": "dc_type",
+                    "type": "field"
+                },
+                {
+                    "key": "dc_dependent",
+                    "type": "field"
+                },
+                {
+                    "key": "dc_textother",
+                    "type": "field"
+                },
+                {
+                    "key": "dc_toggle",
+                    "type": "field"
+                }
+            ],
+            "label": "fbt_create_data_collector1",
+            "visible": true
+        },
+        {
+            "key": "dc_create_data_collector2",
+            "type": "SECTION",
+            "controllist": [
+                {
+                    "key": "dc_date",
+                    "type": "field"
+                },
+                {
+                    "key": "dc_range",
+                    "type": "field"
+                },
+                {
+                    "key": "dc_textappend",
+                    "type": "field"
+                },
+                {
+                    "key": "dc_button",
+                    "type": "field"
+                }
+            ],
+            "visible": false
+        },
+        {
+            "key": "IEEE",
+            "type": "SECTION",
+            "controllist": [
+                {
+                    "key": "dc_range_2",
+                    "type": "field"
+                }
+            ],
+            "visible": true
+        }
+    ],
+    "controls": [
+        {
+            "id": "dc_name",
+            "key": "dc_name",
+            "label": "fbt_name",
+            "type": "TEXT",
+            "disabled": false,
+            "mandatory": true,
+            "maxlength": 100,
+            "path": ".",
+            "value": "Hello World !!",
+            "errorMessages": {
+                "REQUIRED_ERROR": "fbt_REQUIRED_ERROR_instance_name"
+            }
+        },
+        {
+            "id": "dc_type",
+            "key": "dc_type",
+            "label": "fbt_type",
+            "type": "DROPDOWN",
+            "disabled": false,
+            "selectorControl": {
+                "defaultValue": "LOCAL_FILE",
+                "options": {
+                    "LOCAL_FILE": "fbt_option_local_file",
+                    "PULL": "fbt_option_pull",
+                    "SMBPULL": "fbt_option_smbpull",
+                    "SCRIPTPULL": "fbt_option_scriptpull",
+                    "LOCAL_SCRIPTPULL": "fbt_option_local_scriptpull",
+                    "WBEM_PULL": "fbt_option_wbem_pull",
+                    "LOCAL_WINDOWS_EVENTS": "fbt_option_local_windows_events",
+                    "INTEGRATION": "fbt_option_integration",
+                    "PORT_PUSH": "fbt_option_port_push",
+                    "REST_END_POINT": "fbt_option_rest_end_point",
+                    "FILE_UPLOAD": "fbt_option_file_upload"
+                }
+            },
+            "mandatory": true,
+            "path": "."
+        },
+        {
+            "id": "dc_date",
+            "key": "dc_date",
+            "label": "fbt_date",
+            "type": "DATE",
+            "disabled": false,
+            "mandatory": true,
+            "value": null
+        },
+        {
+            "id": "dc_range",
+            "key": "dc_range",
+            "label": "fbt_range",
+            "type": "RANGE",
+            "minlength": 0,
+            "maxlength": 100,
+            "value": 60
+        },
+        {
+            "id": "dc_button",
+            "key": "dc_button",
+            "label": "fbt_button",
+            "type": "BUTTON",
+            "disabled": false
+        },
+        {
+            "id": "dc_dependent",
+            "key": "dc_dependent",
+            "label": "fbt_dependentlist",
+            "type": "DEPENDENTLIST",
+            "disabled": false
+        },
+        {
+            "id": "dc_textappend",
+            "key": "dc_textappend",
+            "label": "fbt_textappend",
+            "type": "TEXTAPPEND",
+            "disabled": false
+        },
+        {
+            "id": "dc_textother",
+            "key": "dc_textother",
+            "label": "fbt_textother",
+            "type": "TEXTOTHER",
+            "disabled": false
+        },
+        {
+            "id": "dc_toggle",
+            "key": "dc_toggle",
+            "label": "fbt_toggle",
+            "type": "TOGGLE",
+            "disabled": true,
+            "value": false
+        },
+        {
+            "id": "dc_range_2",
+            "key": "dc_range_2",
+            "label": "Marks",
+            "type": "RANGE",
+            "minlength": "1",
+            "maxlength": "100",
+            "value": 60
+        }
+    ],
+    "FORM_NAME": "FORM_1"
+}

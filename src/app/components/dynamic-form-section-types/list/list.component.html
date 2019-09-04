@@ -1,0 +1,7 @@
+<div
+    *ngFor="let dynamicFormSection of dynamicForm.getSections()">
+    <app-dynamic-form-section 
+        [dynamicFormSection]="dynamicFormSection" 
+        [dfFormGroup]="dfFormGroup">
+    </app-dynamic-form-section>
+</div>

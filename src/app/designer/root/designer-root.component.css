@@ -1,0 +1,14 @@
+.right{
+    position: absolute;
+    width:50%;
+    height:900px;
+    right: 0px;
+}
+
+.row{
+    position: absolute;
+    width:50%;
+    height:900px;
+    left: 0px;
+
+}

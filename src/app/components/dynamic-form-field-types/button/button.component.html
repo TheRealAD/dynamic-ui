@@ -1,0 +1,11 @@
+<div [formGroup]="dfForm">
+    <button 
+        class="form-control btn btn-primary" 
+        type="button"
+        (click)="onClick()"
+        [id]="dfFormField.key" 
+        [name]="dfFormField.key"
+        [disabled]="dfFormField.disabled">
+        {{ dfFormField.label }}
+    </button>
+</div>

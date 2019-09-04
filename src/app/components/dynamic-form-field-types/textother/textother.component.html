@@ -1,0 +1,30 @@
+<div class="form-inline" [formGroup]="dfForm" >
+    <div class="row">
+        <div class="col-md-6">
+            <select 
+                class="form-control"
+                style="width: 100%;"
+                (change)="changecat()" 
+                [id]="dfFormField.key"
+                [name]="dfFormField.key"
+                [formControlName]="dfFormField.key">
+                    <!-- <option value="" disabled selected>Select</option>
+                    <option value="BTech">BTech</option>
+                    <option value="BSc">BSc</option>
+                    <option value="BPharm">BPharm</option>
+                    <option value="Other">Other</option> -->
+                    <option 
+                        *ngFor="let masterOption of masterOptions" 
+                        [ngValue]="masterOption.key">
+                            {{ masterOption.value }}
+                    </option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <input 
+                class="form-control" 
+                style="width: 100%;" 
+                type={{needed}}>
+        </div>
+    </div>
+</div>
