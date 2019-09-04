@@ -49,13 +49,10 @@
                     "type": "field"
                 },
                 {
-                    "key": "dc_button",
-                    "type": "field"
-                },
-                {
-                    "key": "dc_googlesearch_2",
+                    "key": "dc_range",
                     "type": "field"
                 }
+               
             ],
             "visible": false
         }

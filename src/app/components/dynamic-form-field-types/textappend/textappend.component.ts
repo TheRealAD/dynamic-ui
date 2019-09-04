@@ -15,7 +15,7 @@ export class TextAppendComponent implements OnInit {
     @Input() dfForm: FormGroup;
     @Input() dfFormField: FormField;
 
-    suffix="Rajvardhan Oak";
+    suffix="John Doe or Jane Doe";
     temp=this.suffix;
     masterOptions=[];
 
